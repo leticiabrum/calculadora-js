@@ -12,40 +12,39 @@
 
     <section class="background">
         <h2 class="title">by Leticia Brum</h2>
-        <div class="calculator">
+        <div class="calculator neon-border">
             <h1>calculadora</h1>
             <div class="input-display">
-                <input class="display" id="display" placeholder="*" readonly>
+                <input class="display" id="display" placeholder="0" readonly>
             </div>
             <table class="table-elements">
                 <tr class="table-line">
-                    <td><button class="calculate-button" onclick="clearDisplay()">c</button></td>
-                    <td><button class="calculate-button" onclick="appendToDisplay(<)"><</button></td>
-                    <td><button class="calculate-button" onclick="appendToDisplay(/)">/</button></td>
-                    <td><button class="calculate-button" onclick="appendToDisplay(x)">x</button></td>
+                    <td><button class="calculate-button" onclick="appendToDisplay('%')">%</button></td>
+                    <td><button class="calculate-button" onclick="appendToDisplay('/')">/</button></td>
+                    <td><button class="calculate-button" onclick="appendToDisplay('*')">*</button></td>
+                    <td><button class="operator-button" onclick="clearDisplay()">c</button></td>
                 </tr>
                 <tr class="table-line">
                     <td><button onclick="appendToDisplay(7)">7</button></td>
                     <td><button onclick="appendToDisplay(8)">8</button></td>
                     <td><button onclick="appendToDisplay(9)">9</button></td>
-                    <td><button class="calculate-button" onclick="appendToDisplay(-)">-</button></td>
+                    <td><button class="calculate-button" onclick="appendToDisplay('-')">-</button></td>
                 </tr>
                 <tr class="table-line">
                     <td><button onclick="appendToDisplay(4)">4</button></td>
                     <td><button onclick="appendToDisplay(5)">5</button></td>
                     <td><button onclick="appendToDisplay(6)">6</button></td>
-                    <td><button class="calculate-button" onclick="appendToDisplay(+)">+</button></td>
+                    <td><button class="calculate-button" onclick="appendToDisplay('+')">+</button></td>
                 </tr>
                 <tr class="table-line">
                     <td><button onclick="appendToDisplay(1)">1</button></td>
                     <td><button onclick="appendToDisplay(2)">2</button></td>
                     <td><button onclick="appendToDisplay(3)">3</button></td>
-                    <td><button class="calculate-button" onclick="appendToDisplay(%)">%</button></td>
+                    <td rowspan="2"><button class="operator-button" onclick="calculate()">=</button></td>
                 </tr>
                 <tr class="table-line">
-                    <td><button onclick="appendToDisplay(0)">0</button></td>
-                    <td><button onclick="appendToDisplay(.)">.</button></td>
-                    <td><button class="result-button" onclick="calculate()">=</button></td>
+                    <td colspan="2"><button onclick="appendToDisplay(0)">0</button></td>
+                    <td><button onclick="appendToDisplay('.')">.</button></td>
                 </tr>
             </table>
         </div>
